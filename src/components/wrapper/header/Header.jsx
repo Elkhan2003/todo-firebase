@@ -9,7 +9,7 @@ export const Header = () => {
 			<button disabled={false}>Admin Panel</button>
 			<Link to={`/`} className="link">
 				<span className={location.pathname === "/" ? "active-link" : ""}>
-					Home
+					Vite
 				</span>
 			</Link>
 			<Link to={`/todo`} className="link">
