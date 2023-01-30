@@ -5,8 +5,8 @@ import "./Header.scss";
 export const Header = () => {
 	const location = useLocation();
 	return (
-		<div>
-			<button disabled={null}>Admin Panel</button>
+		<div className="header">
+			<button disabled={false}>Admin Panel</button>
 			<Link to={`/`} className="link">
 				<span className={location.pathname === "/" ? "active-link" : ""}>
 					Home
