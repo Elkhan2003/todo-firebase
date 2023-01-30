@@ -1,0 +1,14 @@
+.active-link {
+	color: red;
+}
+
+.link {
+	margin: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+
+	&:hover {
+		color: #690000;
+	}
+}

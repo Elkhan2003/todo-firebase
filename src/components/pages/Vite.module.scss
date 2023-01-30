@@ -1,8 +1,10 @@
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
+.vite {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
+
+	height: 80vh;
 }
 
 .logo {
@@ -38,6 +40,6 @@
 	padding: 2em;
 }
 
-.read-the-docs {
+.read_the_docs {
 	color: #888;
 }
