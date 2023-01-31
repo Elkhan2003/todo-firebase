@@ -6,7 +6,7 @@ export const Header = () => {
 	const location = useLocation();
 	return (
 		<div className="header">
-			<button disabled={false}>Admin Panel</button>
+			<button disabled={true}>Admin Panel</button>
 			<Link to={`/`} className="link">
 				<span className={location.pathname === "/" ? "active-link" : ""}>
 					Vite
