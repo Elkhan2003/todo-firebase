@@ -1,10 +1,10 @@
 import React from "react";
-import { Wrapper } from "./components/wrapper/Wrapper";
+import { TodoList } from "./components/TodoList";
 
 export const App = () => {
 	return (
 		<div>
-			<Wrapper />
+			<TodoList/>
 		</div>
 	);
 };
