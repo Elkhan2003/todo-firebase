@@ -24,6 +24,18 @@ export const Header = () => {
         >
           Contact
         </NavLink>
+        <NavLink
+          to="journal"
+          className={({ isActive }) => (isActive ? "activeStyle" : undefined)}
+        >
+          Journal
+        </NavLink>
+        <NavLink
+          to="todo"
+          className={({ isActive }) => (isActive ? "activeStyle" : undefined)}
+        >
+          TodoList
+        </NavLink>
       </div>
     </>
   );
