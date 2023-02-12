@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebaseConfig";
-import { query, collection, onSnapshot } from "firebase/firestore";
+import { query, collection, onSnapshot, updateDoc, doc } from "firebase/firestore";
 
 export const Journal = () => {
 	const [participants, setParticipants] = useState([].sort((a, b) => (a.name > b.name ? 1 : -1)));
@@ -21,12 +21,23 @@ export const Journal = () => {
 	const handleClick = (status, name) => {
 		const updatedParticipants = participants.map((participant) => {
 			if (participant.name === name) {
-				return { ...participant, status: status };
+				updateDoc(doc(db, "people", participant.id), { status });
+				return { ...participant, status };
 			}
 			return participant;
 		});
 		setParticipants(updatedParticipants);
 	};
+
+	// const handleClick = (status, name) => {
+	// 	const updatedParticipants = participants.map((participant) => {
+	// 		if (participant.name === name) {
+	// 			return { ...participant, status: status };
+	// 		}
+	// 		return participant;
+	// 	});
+	// 	setParticipants(updatedParticipants);
+	// };
 
 	const peopleParticipants = participants.filter((participant) => participant.status === "People");
 	const presentParticipants = participants.filter((participant) => participant.status === "Present");
