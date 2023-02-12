@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-	width: 15px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -17,9 +17,8 @@
 		to(#002fff)
 	);
 	background: linear-gradient(to bottom, red, #002fff);
-	border-radius: 30px;
-	box-shadow: 0px 0px 10px #ff0000, 0px 0px 20px #ff0000, 0px 0px 30px #ff0000;
-	//border: 2px solid #15c1e5;
+	border-radius: 15px;
+	// border: 2px solid #15c1e5;
 }
 
 *,
@@ -34,27 +33,23 @@
 	// background: transparent;
 }
 
-body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 :root {
-	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
 	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 }
 
 a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-
-a:hover {
-	color: #535bf2;
+	// color: #646cff;
+	text-decoration: none;
 }
 
 button {
@@ -83,9 +78,11 @@ button:focus-visible {
 		color: #213547;
 		background-color: #ffffff;
 	}
+
 	a:hover {
 		color: #747bff;
 	}
+
 	button {
 		background-color: #f9f9f9;
 	}

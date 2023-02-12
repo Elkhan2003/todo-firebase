@@ -1,23 +1,23 @@
 import React from "react";
-import scss from "./Wrapper.module.scss";
-import { Header } from "./header/Header.jsx";
-import { Main } from "./main/Main.jsx";
-import { Footer } from "./footer/Footer.jsx";
+import { Header } from "./header/Header";
+import { Main } from "./main/Main";
+import { Footer } from "./footer/Footer";
+import "./Wrapper.scss";
 
 export const Wrapper = () => {
 	return (
-		<>
-			<div className={scss.wrapper}>
-				<header className={scss.header}>
-					<Header />
-				</header>
-				<main className={scss.main}>
-					<Main />
-				</main>
-				<footer className={scss.footer}>
-					<Footer />
-				</footer>
-			</div>
-		</>
+		<div className="wrapper">
+			<header>
+				<Header />
+			</header>
+
+			<main>
+				<Main />
+			</main>
+
+			<footer>
+				<Footer />
+			</footer>
+		</div>
 	);
 };
